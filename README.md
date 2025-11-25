@@ -15,11 +15,11 @@
 | 前端/后端工程师 | 阅读 05/08/29/Topics-Tools，了解 blueprint 与 off-chain 接入 |
 
 ## Star 进度条
-- ⭐️ 100：发布 01–05（语言 & 工程基础）
-- ⭐️ 300：发布 06–12（测试 + Context 深潜）
-- ⭐️ 600：发布 13–20（引用输入、Reference Scripts、FT/NFT）
-- ⭐️ 1000：发布 21–30（Demo DApp + 生产实践）
-- ⭐️ 1500：发布安全篇 S01–S08 + Cardano 规则 CA01–CA06
+- ⭐️ 0：发布 01–05（语言 & 工程基础）
+- ⭐️ 10：发布 06–12（测试 + Context 深潜）
+- ⭐️ 15：发布 13–20（引用输入、Reference Scripts、FT/NFT）
+- ⭐️ 20：发布 21–30（Demo DApp + 生产实践）
+- ⭐️ 30：发布安全篇 S01–S08 + Cardano 规则 CA01–CA06
 
 ## 使用方式
 1. 每讲目录最需要关注的只有两处：`README.md`（讲解/命令/练习）和示例代码目录（`src/` 或 `validators/` / `lib/` / `test/`）。其它如 `aiken.lock`、`build/`、`plutus.json` 都是 CLI 自动生成的产物，可忽略。
