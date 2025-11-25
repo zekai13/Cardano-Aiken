@@ -1,6 +1,6 @@
 # 01 · Hello Aiken
 
-三行代码写出第一个 validator，跑通完整工具链。从这一讲开始，WTF-Aiken 的每一篇都聚焦链上验证脚本、EUTxO 与 Aiken CLI，而不是 Solidity 式的“合约系统”思维。
+三行代码写出第一个 validator，跑通完整工具链。从这一讲开始，Cardano-Aiken 的每一篇都聚焦链上验证脚本、EUTxO 与 Aiken CLI，而不是 Solidity 式的“合约系统”思维。
 
 ---
 
