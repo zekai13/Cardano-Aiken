@@ -7,7 +7,7 @@
 2. **注重 CLI 与 EUTxO 思维**：每一讲都提供 `src/main.ak` 示例与 CLI 操作，强调 Datum/Redeemer/Context 设计。
 3. **对标 WTF-Solidity 的阅读体验**：章节命名、目录结构、README 风格保持“讲次 + 代码/文章”格式，便于追更与引用。
 
-## 如何食用 cardano-aiken
+## 教程指南 cardano-aiken
 | 角色 | 建议操作 |
 | --- | --- |
 | 新手 | 按编号顺序学习，结合 `src/main.ak` 与 README 同步练习 |
