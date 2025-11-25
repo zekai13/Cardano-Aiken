@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson01"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 01 · Hello Aiken sample project"
+plutus_version = "v3"

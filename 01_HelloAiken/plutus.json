@@ -1,0 +1,46 @@
+{
+  "preamble": {
+    "title": "cardano_aiken/lesson01",
+    "description": "Lesson 01 · Hello Aiken sample project",
+    "version": "0.1.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.19+e525483"
+    },
+    "license": "MIT"
+  },
+  "validators": [
+    {
+      "title": "hello_aiken.hello_aiken.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "587d01010029800aba2aba1aab9eaab9dab9cab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c020dd500144c8cc892898058009805980600098049baa0028b200c180380098021baa0078a4d15330024911856616c696461746f722072657475726e65642066616c7365001365640041",
+      "hash": "392dc6ca387fde5ef8afd5b1f23f209b9f22e11c6cf394c9e36fdeda"
+    },
+    {
+      "title": "hello_aiken.hello_aiken.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "587d01010029800aba2aba1aab9eaab9dab9cab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c020dd500144c8cc892898058009805980600098049baa0028b200c180380098021baa0078a4d15330024911856616c696461746f722072657475726e65642066616c7365001365640041",
+      "hash": "392dc6ca387fde5ef8afd5b1f23f209b9f22e11c6cf394c9e36fdeda"
+    }
+  ],
+  "definitions": {
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    }
+  }
+}

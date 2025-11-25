@@ -1,0 +1,14 @@
+{
+  "preamble": {
+    "title": "cardano-aiken/lesson02",
+    "description": "Lesson 02 · Language Tour sample project",
+    "version": "0.1.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.19+e525483"
+    },
+    "license": "MIT"
+  },
+  "validators": []
+}
