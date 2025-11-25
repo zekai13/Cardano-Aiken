@@ -1,6 +1,6 @@
 # cardano-aiken
 
-> 借鉴 WTF-Solidity 的节奏，但将 Cardano + Aiken 的知识体系完整打包：语言、UTxO 流程、validator 模式、blueprint、前端集成，一个仓库搞定。
+> 将 Cardano + Aiken 的知识体系完整打包：语言、UTxO 流程、validator 模式、blueprint、前端集成，一个仓库搞定。
 
 ## 项目定位
 1. **Cardano 链上开发入门路径**：用 30 讲主线 + 安全篇 + Cardano 规则篇覆盖从语法到生产部署的全部环节。
