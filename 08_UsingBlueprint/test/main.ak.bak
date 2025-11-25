@@ -1,0 +1,25 @@
+use aiken/builtin.{Data, ByteArray}
+use aiken/test
+use cardano/transaction
+use cardano_aiken/lesson08.{owner_only}
+
+fn ctx_with_signer(owner: ByteArray) -> transaction::ScriptContext {
+  transaction::ScriptContext {
+    purpose: transaction::ScriptPurpose::Spend(transaction::OutputReference::new(transaction::TxId(#[]), 0)),
+    script_hash: #[],
+    transaction: transaction::Transaction {
+      extra_signatories: [owner],
+      ..transaction::Transaction::default()
+    }
+  }
+}
+
+test fn owner_only_passes() {
+  let ctx = ctx_with_signer(#"abcd")
+  expect True = owner_only(#"abcd", ctx)
+}
+
+test fn owner_only_blocks() {
+  let ctx = ctx_with_signer(#"abcd")
+  expect False = owner_only(#"ffff", ctx)
+}

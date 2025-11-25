@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson08"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 08 · Using Blueprint"
+plutus_version = "v3"

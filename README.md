@@ -22,7 +22,7 @@
 - ⭐️ 1500：发布安全篇 S01–S08 + Cardano 规则 CA01–CA06
 
 ## 使用方式
-1. 本仓库遵循「每讲一个文件夹」的结构，`README.md` 提供教学脚本，`src/main.ak` 提供示例代码。
+1. 每讲目录最需要关注的只有两处：`README.md`（讲解/命令/练习）和示例代码目录（`src/` 或 `validators/` / `lib/` / `test/`）。其它如 `aiken.lock`、`build/`、`plutus.json` 都是 CLI 自动生成的产物，可忽略。
 2. 克隆后直接进入目标章节，例如 `cd 01_HelloAiken && aiken check` 体验 CLI。
 3. 若需阅读所有章节，可配合 GitHub Codespaces 或本地多终端窗口同时打开。
 
@@ -36,6 +36,20 @@
 | 其他辅助 | `tree`、`lsd`、`zsh-autosuggestions` 等 | 纯增强体验，非必需。 |
 
 > 常见错误提示：若在仓库根直接执行 `aiken build` 会提示找不到 `aiken.toml`，因为它只存在于子目录；请先 `cd` 到具体讲次。
+
+## 每讲常见文件结构
+| 路径 | 说明 |
+| --- | --- |
+| `README.md` | 本讲的教学说明，包含命令、术语、练习与运行结果示例。 |
+| `aiken.toml` | Aiken 项目清单，声明 `name`、`version`、`plutus_version` 等。 |
+| `aiken.lock`、`build/` | CLI 自动生成的锁文件与缓存，一般无需手动修改。 |
+| `src/` | 纯函数或业务逻辑示例，通常配合 `lib/`、`validators/` 使用。 |
+| `lib/` | 可选目录，用于拆分公共 helper。 |
+| `validators/` | 当讲次涉及链上脚本时，validator/ policy 会放在这里。 |
+| `test/` | `aiken check` 会执行的测试案例，演示如何导入本讲模块。 |
+| `plutus.json` | `aiken build` 生成的 blueprint 文件，后续章节或前端可以复用。 |
+
+> 只要记住“进入讲次目录 -> 看 README -> 参考 `src/`/`validators/`/`test/`”，其余文件都是 CLI 自动生成的辅助素材。
 
 ## 01–30 主课程目录
 | 章节 | 中文标题 | 英文标题 | 代码 | 文章 |

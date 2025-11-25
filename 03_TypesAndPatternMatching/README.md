@@ -20,6 +20,15 @@
 | 编译 + 跑测试 | `aiken check` | 验证 `src/main.ak` 与 `test/main.ak`，输出 0/若干测试都属正常。 |
 | 生成 `plutus.json` | `aiken build --trace-level verbose` | 目前同样没有 validator，会出现 “You do not have any validators to build!” 警告。 |
 
+## 本讲文件速览
+| 文件/目录 | 作用 |
+| --- | --- |
+| `README.md` | 类型与模式匹配的讲义、练习、运行结果。 |
+| `aiken.toml` | 声明包名 `cardano_aiken/lesson03`、Plutus 版本。 |
+| `src/main.ak` | 定义 `OrderStatus`、`label`、`next` 等示例，演示模式匹配。 |
+| `test/main.ak` | `label_states`、`next_transitions` 等断言，确保每种状态分支都被覆盖。 |
+| `plutus.json`、`build/…` | `aiken build` 生成的 blueprint 与缓存，虽然本讲没 validator，但 CLI 仍会输出。 |
+
 ---
 
 ## 1. 定义类型：枚举 + Record

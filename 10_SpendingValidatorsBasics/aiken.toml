@@ -1,0 +1,5 @@
+name = "cardano-aiken/lesson10"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 10 · Spending Validators Basics"
+plutus_version = "v3"

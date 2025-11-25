@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson09"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 09 · On-Chain Data Modelling"
+plutus_version = "v3"

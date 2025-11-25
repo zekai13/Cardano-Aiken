@@ -16,15 +16,25 @@
 | 运行测试 | `aiken check`，输出 `Compiling ... Collecting all tests` 即代表成功 |
 | 生成 `plutus.json`（可选） | `aiken build --trace-level verbose`，末尾会提示 “You do not have any validators to build!” ——因为本讲没有脚本，是正常现象 |
 
+## 本讲文件速览
+| 文件/目录 | 作用 |
+| --- | --- |
+| `README.md` | 本讲讲义、命令、练习、Troubleshooting。 |
+| `aiken.toml` | 声明包名 `cardano_aiken/lesson04`、Plutus 版本。 |
+| `src/helpers.ak` | 封装 `average` 等公共函数（直接使用 `list.List(Int)` 类型）。 |
+| `src/main.ak` | 业务层示例 `describe_avg`，展示如何引用 helpers。 |
+| `test/main.ak` | 针对 helpers 的断言。 |
+| `plutus.json`、`build/…` | `aiken build` 的输出与缓存，虽然没有 validator 仍会生成。 |
+
 ---
 
 ## 1. 项目结构
 ```
 04_ModulesAndStdlib/
 ├── aiken.toml
-├── lib/
-│   └── helpers.ak        # 公共函数
-├── src/main.ak           # 业务逻辑，引用 helpers
+├── src/
+│   ├── helpers.ak        # 公共函数
+│   └── main.ak           # 引用 helpers 的业务逻辑
 └── test/main.ak          # 针对 helpers 的断言
 ```
 
@@ -39,7 +49,7 @@
 ```gleam
 use aiken/collection/list
 
-pub fn average(values: List(Int)) -> Option(Int) {
+pub fn average(values: list.List(Int)) -> Option(Int) {
   let total = list.fold(values, 0, fn(acc, v) { acc + v })
   let count = list.length(values)
 
@@ -53,10 +63,11 @@ pub fn average(values: List(Int)) -> Option(Int) {
 
 `src/main.ak` 引用：
 ```gleam
-use cardano_aiken/lesson04/helpers
+use aiken/collection/list
+use cardano_aiken/lesson04.helpers.{average}
 
-pub fn describe_avg(values: List(Int)) -> String {
-  when helpers.average(values) is {
+pub fn describe_avg(values: list.List(Int)) -> String {
+  when average(values) is {
     Some(avg) -> Int.to_string(avg)
     None -> "0"
   }
@@ -86,7 +97,6 @@ aiken check
 ## 4. 练习
 | 练习 | 操作 | 验证方式 |
 | --- | --- | --- |
-| 添加 `median` 函数 | 在 `lib/helpers.ak` 里实现 `median`，排序后取中位数 | `aiken check` |
 | 模块别名 | 在 `src/main.ak` 里用 `use cardano_aiken/lesson04/helpers as H`，调用 `H.average` | `aiken check` |
 | 使用 Result | 将平均数改写为 `Result(Int, String)`，在 `test/` 写成功/失败断言 | `aiken check` |
 

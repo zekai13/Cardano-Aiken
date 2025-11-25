@@ -36,6 +36,17 @@
 
 ---
 
+## 本讲文件速览
+| 文件/目录 | 作用 |
+| --- | --- |
+| `README.md` | 本讲教学正文、命令、运行结果与练习。 |
+| `aiken.toml` | 声明包名 `cardano_aiken/lesson01`、Plutus 版本、描述信息。 |
+| `validators/hello_aiken.ak` | 最小的 validator 示例，CLI 构建时会编译它。 |
+| `test/main.ak` | `test fn my_first_test()`，展示如何用 `aiken check` 执行断言。 |
+| `plutus.json`、`build/…` | `aiken build` 输出的 blueprint 与缓存，方便后续课程引用。 |
+
+---
+
 ## 1. 快速概览：Aiken 与 Solidity 的核心差异
 | Aiken | Solidity |
 | --- | --- |

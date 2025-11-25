@@ -22,6 +22,15 @@
 | 编译 + 运行测试 | `aiken check` | CLI 会自动搜寻 `src/` 与 `test/`，验证语法后执行断言。输出中若 `Summary` 显示 0 测试属正常（此讲以纯函数示例为主）。 |
 | 生成 `plutus.json` | `aiken build --trace-level verbose` | 方便后续章节复用；因为本讲没有 validator，命令末尾会提示 “You do not have any validators to build!” ——这是预期的。 |
 
+## 本讲文件速览
+| 文件/目录 | 作用 |
+| --- | --- |
+| `README.md` | Language Tour 的讲义：语法说明、练习、命令示例。 |
+| `aiken.toml` | 声明包名 `cardano-aiken/lesson02`、Plutus 版本与描述信息。 |
+| `src/main.ak` | 语言示例的主体，包含 `greet`、`describe`、`average` 等函数。 |
+| `test/main.ak` | 对 `src` 中函数的断言，如 `greet_person`、`average_and_sum`。 |
+| `plutus.json`、`build/…` | `aiken build` 输出的 blueprint 与缓存（虽无 validator，仍会生成文件）。 |
+
 ## 术语速览
 | 术语 | 一句话解释 |
 | --- | --- |

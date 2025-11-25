@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson05"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 05 · Project Structure & CLI"
+plutus_version = "v3"

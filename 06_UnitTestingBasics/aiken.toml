@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson06"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 06 · Unit Testing Basics"
+plutus_version = "v3"

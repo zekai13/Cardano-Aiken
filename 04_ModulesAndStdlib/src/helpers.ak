@@ -10,14 +10,3 @@ pub fn average(values: List(Int)) -> Option(Int) {
     Some(total / count)
   }
 }
-
-pub fn median(values: List(Int)) -> Option(Int) {
-  let sorted = list.sort(values, fn(a, b) { a <= b })
-  let len = list.length(sorted)
-  if len == 0 {
-    None
-  } else {
-    let mid = len / 2
-    Some(sorted[mid])
-  }
-}
