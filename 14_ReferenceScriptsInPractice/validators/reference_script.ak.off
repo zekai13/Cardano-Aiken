@@ -1,0 +1,7 @@
+use cardano_aiken/lesson14
+
+validator reference_script {
+  spend(datum, redeemer, context) {
+    lesson14.main(datum, redeemer, context)
+  }
+}

@@ -1,0 +1,7 @@
+use cardano_aiken/lesson15
+
+validator state_machine {
+  spend(datum, redeemer, context) {
+    lesson15.main(datum, redeemer, context)
+  }
+}

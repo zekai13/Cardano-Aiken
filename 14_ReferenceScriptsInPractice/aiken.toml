@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson14"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 14 · Reference Scripts In Practice"
+plutus_version = "v3"

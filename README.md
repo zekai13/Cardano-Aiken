@@ -1,13 +1,13 @@
 # cardano-aiken
 
-> 将 Cardano + Aiken 的知识体系完整打包：语言、UTxO 流程、validator 模式、blueprint、前端集成，一个仓库搞定。
+将 Cardano + Aiken 的知识体系完整打包：语言、UTxO 流程、validator 模式、blueprint、前端集成，一个仓库搞定。
 
 ## 项目定位
 1. **Cardano 链上开发入门路径**：用 30 讲主线 + 安全篇 + Cardano 规则篇覆盖从语法到生产部署的全部环节。
 2. **注重 CLI 与 EUTxO 思维**：每一讲都提供 `src/main.ak` 示例与 CLI 操作，强调 Datum/Redeemer/Context 设计。
-3. **阅读体验**：章节命名、目录结构、README 风格保持“讲次 + 代码/文章”格式，便于追更与引用。
+3. 章节命名、目录结构、README 风格保持“讲次 + 代码/文章”格式，便于追更与引用。
 
-## 教程指南 cardano-aiken
+## 如何食用 cardano-aiken
 | 角色 | 建议操作 |
 | --- | --- |
 | 新手 | 按编号顺序学习，结合 `src/main.ak` 与 README 同步练习 |
@@ -22,39 +22,14 @@
 - ⭐️ 30：发布安全篇 S01–S08 + Cardano 规则 CA01–CA06
 
 ## 使用方式
-1. 每讲目录最需要关注的只有两处：`README.md`（讲解/命令/练习）和示例代码目录（`src/` 或 `validators/` / `lib/` / `test/`）。其它如 `aiken.lock`、`build/`、`plutus.json` 都是 CLI 自动生成的产物，可忽略。
+1. 本仓库遵循「每讲一个文件夹」的结构，`README.md` 提供教学脚本，`src/main.ak` 提供示例代码。
 2. 克隆后直接进入目标章节，例如 `cd 01_HelloAiken && aiken check` 体验 CLI。
 3. 若需阅读所有章节，可配合 GitHub Codespaces 或本地多终端窗口同时打开。
-
-## 启动之前：必备环境 & 工具
-| 步骤 | 命令/动作 | 备注 |
-| --- | --- | --- |
-| 安装 Aiken CLI | `curl -sSf https://install.aiken-lang.org | sh` | 安装完运行 `source $HOME/.aiken/bin/env`，再执行 `aiken --version` 验证。若网络受限，可去 GitHub Releases 下载二进制或用 Homebrew（需具备写权限）。 |
-| 准备终端/编辑器 | VS Code / Terminal / iTerm | 所有命令都在章节目录下运行：`cd 01_HelloAiken`、`cd 02_LanguageTour` 等。VS Code 终端默认停在仓库根，记得手动切换目录。 |
-| Git（可选但推荐） | `git clone git@github.com:...` | 管理每讲的练习结果或提交 PR。 |
-| Node/npm（后续章节） | `brew install node` 或官网下载 | 08 讲以后会用来整合 blueprint、前端工具链，前几讲可暂时不装。 |
-| 其他辅助 | `tree`、`lsd`、`zsh-autosuggestions` 等 | 纯增强体验，非必需。 |
-
-> 常见错误提示：若在仓库根直接执行 `aiken build` 会提示找不到 `aiken.toml`，因为它只存在于子目录；请先 `cd` 到具体讲次。
-
-## 每讲常见文件结构
-| 路径 | 说明 |
-| --- | --- |
-| `README.md` | 本讲的教学说明，包含命令、术语、练习与运行结果示例。 |
-| `aiken.toml` | Aiken 项目清单，声明 `name`、`version`、`plutus_version` 等。 |
-| `aiken.lock`、`build/` | CLI 自动生成的锁文件与缓存，一般无需手动修改。 |
-| `src/` | 纯函数或业务逻辑示例，通常配合 `lib/`、`validators/` 使用。 |
-| `lib/` | 可选目录，用于拆分公共 helper。 |
-| `validators/` | 当讲次涉及链上脚本时，validator/ policy 会放在这里。 |
-| `test/` | `aiken check` 会执行的测试案例，演示如何导入本讲模块。 |
-| `plutus.json` | `aiken build` 生成的 blueprint 文件，后续章节或前端可以复用。 |
-
-> 只要记住“进入讲次目录 -> 看 README -> 参考 `src/`/`validators/`/`test/`”，其余文件都是 CLI 自动生成的辅助素材。
 
 ## 01–30 主课程目录
 | 章节 | 中文标题 | 英文标题 | 代码 | 文章 |
 | --- | --- | --- | --- | --- |
-| 第01讲 | Hello Aiken | 01_HelloAiken | [validator](./01_HelloAiken/validators/hello_aiken.ak) | [README](./01_HelloAiken/README.md) |
+| 第01讲 | Hello Aiken | 01_HelloAiken | [src](./01_HelloAiken/src/main.ak) | [README](./01_HelloAiken/README.md) |
 | 第02讲 | 语言总览 | 02_LanguageTour | [src](./02_LanguageTour/src/main.ak) | [README](./02_LanguageTour/README.md) |
 | 第03讲 | 类型与模式匹配 | 03_TypesAndPatternMatching | [src](./03_TypesAndPatternMatching/src/main.ak) | [README](./03_TypesAndPatternMatching/README.md) |
 | 第04讲 | 模块与标准库 | 04_ModulesAndStdlib | [src](./04_ModulesAndStdlib/src/main.ak) | [README](./04_ModulesAndStdlib/README.md) |

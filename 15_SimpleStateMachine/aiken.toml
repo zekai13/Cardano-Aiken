@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson15"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 15 · Simple State Machine"
+plutus_version = "v3"

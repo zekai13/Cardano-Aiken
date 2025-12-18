@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson12"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 12 · Script Context Deep Dive"
+plutus_version = "v3"
