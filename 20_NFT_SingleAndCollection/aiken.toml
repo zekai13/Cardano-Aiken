@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson20"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 20 · NFT: Single & Collection"
+plutus_version = "v3"

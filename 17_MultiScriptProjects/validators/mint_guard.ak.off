@@ -1,0 +1,7 @@
+use cardano_aiken/lesson17
+
+validator mint_guard {
+  mint(redeemer, context) {
+    lesson17.route(lesson17::ScriptKind::Minting, Data::Constr(0, []), redeemer, context)
+  }
+}

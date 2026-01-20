@@ -1,0 +1,15 @@
+use aiken/result
+use cardano_aiken/lesson18
+
+validator error_guard {
+  spend(datum, redeemer, context) {
+    // Datum: Bytes(owner); Redeemer: Integer(amount); 时间检查示例用 True
+    let owner = when datum is { Data::Bytes(bytes) -> bytes _ -> #[] }
+    let amount = when redeemer is { Data::Integer(x) -> x _ -> 0 }
+
+    match lesson18.validate(owner, amount, True, context) {
+      Ok(_) -> True
+      Error(_) -> False
+    }
+  }
+}

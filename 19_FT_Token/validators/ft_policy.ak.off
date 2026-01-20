@@ -1,0 +1,7 @@
+use cardano_aiken/lesson19
+
+validator ft_policy {
+  mint(redeemer, policy_id, self) {
+    lesson19.main(redeemer, policy_id, self)
+  }
+}

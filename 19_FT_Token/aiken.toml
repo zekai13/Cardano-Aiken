@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson19"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 19 · FT Token"
+plutus_version = "v3"

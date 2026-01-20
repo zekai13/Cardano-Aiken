@@ -1,0 +1,5 @@
+name = "cardano_aiken/lesson17"
+version = "0.1.0"
+license = "MIT"
+description = "Lesson 17 · Multi Script Projects"
+plutus_version = "v3"

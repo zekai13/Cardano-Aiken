@@ -1,0 +1,7 @@
+use cardano_aiken/lesson16
+
+validator time_lock {
+  spend(datum, redeemer, context) {
+    lesson16.main(datum, redeemer, context)
+  }
+}

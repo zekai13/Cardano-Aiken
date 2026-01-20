@@ -1,0 +1,7 @@
+use cardano_aiken/lesson20
+
+validator single_nft {
+  mint(redeemer, policy_id, self) {
+    lesson20.main_single(redeemer, policy_id, self)
+  }
+}

@@ -1,0 +1,7 @@
+use cardano_aiken/lesson17
+
+validator spend_guard {
+  spend(datum, redeemer, context) {
+    lesson17.route(lesson17::ScriptKind::Spending, datum, redeemer, context)
+  }
+}
